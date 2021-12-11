@@ -190,10 +190,11 @@ window.addEventListener('resize', () => {
 
 const navLink = document.querySelectorAll('.menu__link')
 function linkAction(){
-    const navMenu = document.getElementById('menu')
+	const navMenu = document.getElementById('menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('active');
     document.body.classList.remove('lock');
     menuIcon.classList.remove('active');
+    overlay.classList.remove('active');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
